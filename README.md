@@ -1,5 +1,7 @@
 # Vagrant Angband Borg
 
+![Angband Borg screenshot](https://github.com/adamreiser/vagrant-borg/screenshot.png)
+
 ## What is it?
 Angband is a roguelike game.
 
