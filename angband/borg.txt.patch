@@ -1,0 +1,9 @@
+--- ~/.angband/Angband/borg.txt	2012-10-19 19:47:23.000000000 +0000
++++ ~/.angband/Angband/borg.txt	2016-10-15 17:48:13.289600156 +0000
+@@ -201,7 +201,7 @@
+ # to slow the borg down use the following variable.  The formula is:
+ # base_game_delay_factor^2 + borg_delay_factor^2.
+ 
+-borg_delay_factor = 9
++borg_delay_factor = 7
+ 

@@ -1,0 +1,11 @@
+--- angband-v3.4.1/src/main-gcu.c	2012-10-19 19:47:23.000000000 +0000
++++ angband-v3.4.1/src/main-gcu.c	2016-10-13 23:40:50.453252456 +0000
+@@ -139,7 +139,7 @@
+ /* Screen info: use one big Term 0, or other subwindows? */
+ static bool use_big_screen = FALSE;
+ static bool bold_extended = FALSE;
+-static bool ascii_walls = FALSE;
++static bool ascii_walls = TRUE;
+ 
+ /*
+  * Background color we should draw with; either BLACK or DEFAULT
