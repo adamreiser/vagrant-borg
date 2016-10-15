@@ -12,17 +12,18 @@ Vagrant is an environment manager that is used here to create a virtual machine 
 ## Requirements
 
 - VirtualBox
+- Vagrant
 
 ## Usage
 ```bash
 vagrant up; vagrant ssh
 angband-v3.4.1/src/angband
 ```
-- Create a character, enter the borg prompt by typing a caret (^), then z. Then enter a borg command.
+- Create a character, enter the borg prompt by typing a caret (^), then z. Then enter a borg command (z to start the borg).
 
 ## Notes
 
-The profile directory is synced to the virtual machine's ~/.angband directory. It will be populated with angband/borg.txt when the environment is provisioned, if it doesn't exist.
+The profile directory is synced to the virtual machine's /home/vagrant/.angband directory. It contains the active game data, and must also contain Angband/borg.txt, which is added during provisioning.
 
 ## Patches
 
