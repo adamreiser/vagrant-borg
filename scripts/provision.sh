@@ -3,4 +3,4 @@
 apt-get update
 apt-get dist-upgrade -y
 
-apt-get install -y zip build-essential autoconf libncursesw5-dev 
+apt-get install -y build-essential autoconf libncursesw5-dev

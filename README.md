@@ -17,7 +17,7 @@ Vagrant is an environment manager that is used here to create a virtual machine 
 ## Usage
 ```bash
 vagrant up; vagrant ssh
-angband-v3.4.1/src/angband
+angband-3.4.1/src/angband
 ```
 - Create a character, enter the borg prompt by typing a caret (^), then z. Then enter a borg command (z to start the borg).
 
