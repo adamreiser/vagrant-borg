@@ -1,0 +1,51 @@
+--- angband-3.4.1/src/ui-birth.c	2012-10-18 01:33:03.000000000 +0000
++++ angband-3.4.1/src/ui-birth.c	2016-10-26 03:46:18.220296000 +0000
+@@ -108,24 +108,32 @@
+ 	
+ 	do
+ 	{
+-		/* Get a key */
+-		struct keypress ke = inkey();
+-		
+-		if (ke.code == 'N' || ke.code == 'n')
+-		{
+-			cmd_insert(CMD_BIRTH_RESET);
+-			next = BIRTH_SEX_CHOICE;
+-		}
+-		else if (ke.code == KTRL('X'))
++		if (!borg_auto)
+ 		{
+-			cmd_insert(CMD_QUIT);
+-			next = BIRTH_COMPLETE;
+-		}
+-		else if (ke.code == 'C' || ke.code == 'c')
+-		{
+-			next = BIRTH_NAME_CHOICE;
++			/* Get a key */
++			struct keypress ke = inkey();
++		
++			if (ke.code == 'N' || ke.code == 'n')
++			{
++				cmd_insert(CMD_BIRTH_RESET);
++				next = BIRTH_SEX_CHOICE;
++			}
++			else if (ke.code == KTRL('X'))
++			{
++				cmd_insert(CMD_QUIT);
++				next = BIRTH_COMPLETE;
++			}
++			else if (ke.code == 'C' || ke.code == 'c')
++			{
++				next = BIRTH_NAME_CHOICE;
++			}
++			else if (ke.code == 'Y' || ke.code == 'y')
++			{
++				cmd_insert(CMD_ACCEPT_CHARACTER);
++				next = BIRTH_COMPLETE;
++			}
+ 		}
+-		else if (ke.code == 'Y' || ke.code == 'y')
++		else
+ 		{
+ 			cmd_insert(CMD_ACCEPT_CHARACTER);
+ 			next = BIRTH_COMPLETE;

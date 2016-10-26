@@ -1,0 +1,15 @@
+--- angband-3.4.1/src/dungeon.c	2012-10-18 01:33:03.000000000 +0000
++++ angband-3.4.1/src/dungeon.c	2016-10-26 02:31:33.643340000 +0000
+@@ -1779,6 +1779,12 @@
+ 	/* Hack -- Enforce "delayed death" */
+ 	if (p_ptr->chp < 0) p_ptr->is_dead = TRUE;
+ 
++	/* Start borg */
++	if (borg_auto)
++	{
++		do_cmd_try_borg();
++	}
++
+ 	/* Process */
+ 	while (TRUE)
+ 	{

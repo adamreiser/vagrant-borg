@@ -1,0 +1,56 @@
+--- angband-3.4.1/src/borg/borg7.c	2012-10-18 01:33:03.000000000 +0000
++++ angband-3.4.1/src/borg/borg7.c	2016-10-26 03:33:48.569302000 +0000
+@@ -970,7 +970,7 @@
+         /* Choose from equipment */
+         if (b_i >= INVEN_WIELD)
+         {
+-            borg_keypress('/');
++            //borg_keypress('/');
+ 
+             /* Choose that item */
+             borg_keypress(I2A(b_i - INVEN_WIELD));
+@@ -1148,7 +1148,7 @@
+         /* Choose from equipment */
+         if (b_i >= INVEN_WIELD)
+         {
+-            borg_keypress('/');
++            //borg_keypress('/');
+ 
+             /* Choose that item */
+             borg_keypress(I2A(b_i - INVEN_WIELD));
+@@ -1337,7 +1337,7 @@
+         /* Choose from equipment */
+         if (b_i >= INVEN_WIELD)
+         {
+-            borg_keypress('/');
++            //borg_keypress('/');
+ 
+             /* Choose that item */
+             borg_keypress(I2A(b_i - INVEN_WIELD));
+@@ -1408,7 +1408,7 @@
+         /* 291 would like a location of the brand */
+         /* choose the or ammo */
+         {
+-            borg_keypress('/');
++            //borg_keypress('/');
+             borg_keypress(I2A(b_i - INVEN_WIELD));;
+         }
+ 
+@@ -2981,7 +2981,7 @@
+                 else
+                 {
+                     /* Select the inventory */
+-                    borg_keypress('/');
++                    //borg_keypress('/');
+ 
+                     /* Select the item */
+                     borg_keypress(I2A(b_i));
+@@ -3006,7 +3006,7 @@
+                 if (b_i >= INVEN_WIELD)
+                 {
+                     /* Select the equipment */
+-                    borg_keypress('/');
++                    //borg_keypress('/');
+ 
+                     /* Select the item */
+                     borg_keypress(I2A(b_i - INVEN_WIELD));

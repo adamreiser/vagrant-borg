@@ -1,0 +1,50 @@
+--- angband-3.4.1/src/borg/borg9.c	2012-10-18 01:33:03.000000000 +0000
++++ angband-3.4.1/src/borg/borg9.c	2016-10-26 02:25:02.868048000 +0000
+@@ -19,10 +19,6 @@
+ #include "borg8.h"
+ #include "borg9.h"
+ 
+-#ifdef BABLOS
+-extern bool auto_play;
+-extern bool keep_playing;
+-#endif /* bablos */
+ bool borg_cheat_death;
+ 
+ /*
+@@ -5851,31 +5847,15 @@
+ 
+     cmd.type = EVT_KBRD;
+ 
+-#ifdef BABLOS
+-    if (auto_play)
+-    {
+-        auto_play = FALSE;
+-        keep_playing = TRUE;
+-        cmd.code = 'z';
+-    }
+-    else
+-    {
+-
+-#endif /* BABLOS */
+-
+-    /* Get a "Borg command", or abort */
+-#ifdef XSCREENSAVER
+-	if (auto_start_borg == FALSE)
+-#endif
++	if (borg_auto == FALSE)
+ 	{
+ 		if (!get_com("Borg command: ", &cmd)) return;
+ 	}
++	else
++	{
++		cmd.code = 'z';
++	}
+ 
+-#ifdef BABLOS
+-
+-    }
+-
+-#endif /* BABLOS */
+ 
+     /* Simple help */
+     if (cmd.code == '?')

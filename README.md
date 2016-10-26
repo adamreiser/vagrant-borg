@@ -30,6 +30,10 @@ The profile directory is synced to the virtual machine's /home/vagrant/.angband 
 The following patches are applied during provisioning:
 - main-gcu.c: use '#' to represent walls instead of solid colors
 - borg.txt: initial borg configs
+- borg7.c: temporary fix for inventory selection loop (can still loop
+but does so less)
+- borg_autorun/: add a '-b' option to jump straight into borg mode
+(using the last character or generating the same one to start)
 
 ## Borg command list
 ```

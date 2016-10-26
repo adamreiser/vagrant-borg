@@ -1,0 +1,10 @@
+--- angband-3.4.1/src/externs.h	2012-10-18 01:33:03.000000000 +0000
++++ angband-3.4.1/src/externs.h	2016-10-26 01:48:56.231028000 +0000
+@@ -20,6 +20,7 @@
+ #ifdef ALLOW_BORG
+ /* Screensaver variables for the borg.  apw */
+ extern bool screensaver;
++extern bool borg_auto;
+ #endif /* ALLOW_BORG */
+ 
+ /* tables.c */

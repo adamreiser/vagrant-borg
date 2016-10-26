@@ -1,0 +1,38 @@
+--- angband-3.4.1/src/main.c	2012-10-18 01:33:03.000000000 +0000
++++ angband-3.4.1/src/main.c	2016-10-26 02:49:55.650399999 +0000
+@@ -207,8 +207,11 @@
+  */
+ static errr get_init_cmd(void)
+ {
+-	/* Wait for response */
+-	pause_line(Term);
++	if (!borg_auto)
++	{
++		/* Wait for response */
++		pause_line(Term);
++	}
+ 
+ 	if (new_game)
+ 		cmd_insert(CMD_NEWGAME);
+@@ -338,6 +341,11 @@
+ 				debug_opt(arg);
+ 				continue;
+ 
++#ifdef ALLOW_BORG
++			case 'b':
++				borg_auto = true;
++				continue;
++#endif
+ 			case '-':
+ 				argv[i] = argv[0];
+ 				argc = argc - i;
+@@ -365,6 +373,9 @@
+ 				for (i = 0; i < (int)N_ELEMENTS(modules); i++)
+ 					printf("     %s   %s\n",
+ 					       modules[i].name, modules[i].help);
++#ifdef ALLOW_BORG
++				puts("  -b        Auto borg mode");
++#endif
+ 
+ 				/* Actually abort the process */
+ 				quit(NULL);

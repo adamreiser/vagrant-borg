@@ -1,0 +1,25 @@
+--- angband-3.4.1/src/cmd-misc.c	2012-10-18 01:33:03.000000000 +0000
++++ angband-3.4.1/src/cmd-misc.c	2016-10-26 02:50:16.160140000 +0000
+@@ -106,7 +106,7 @@
+ void do_cmd_try_borg(void)
+ {
+ 	/* Ask first time */
+-	if (!(p_ptr->noscore & NOSCORE_BORG))
++	if (!(p_ptr->noscore & NOSCORE_BORG) && !borg_auto)
+ 	{
+ 		/* Mention effects */
+ 		msg("You are about to use the dangerous, unsupported, borg commands!");
+@@ -117,10 +117,11 @@
+ 		if (!get_check("Are you sure you want to use the borg commands? "))
+ 			return;
+ 
+-		/* Mark savefile */
+-		p_ptr->noscore |= NOSCORE_BORG;
+ 	}
+ 
++	/* Mark savefile */
++	p_ptr->noscore |= NOSCORE_BORG;
++
+ 	/* Okay */
+ 	do_cmd_borg();
+ }

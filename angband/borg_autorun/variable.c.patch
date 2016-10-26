@@ -1,0 +1,10 @@
+--- angband-3.4.1/src/variable.c	2012-10-18 01:33:03.000000000 +0000
++++ angband-3.4.1/src/variable.c	2016-10-26 02:08:04.466632000 +0000
+@@ -46,6 +46,7 @@
+ 
+ #ifdef ALLOW_BORG
+ bool screensaver = FALSE;
++bool borg_auto = FALSE;
+ #endif /* ALLOW_BORG */
+ 
+ /*
