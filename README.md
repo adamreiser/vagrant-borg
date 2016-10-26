@@ -20,6 +20,10 @@ vagrant up; vagrant ssh
 angband-3.4.1/src/angband
 ```
 - Create a character, enter the borg prompt by typing a caret (^), then z. Then enter a borg command (z to start the borg).
+- Alternatively, run angband with the '-b' option to start the borg
+automatically. It will create a new character of the previous type if no
+character exists. If there is no previous character, the borg will begin
+after character generation.
 
 ## Notes
 
@@ -33,7 +37,6 @@ The following patches are applied during provisioning:
 - borg7.c: temporary fix for inventory selection loop (can still loop
 but does so less)
 - borg_autorun/: add a '-b' option to jump straight into borg mode
-(using the last character or generating the same one to start)
 
 ## Borg command list
 ```
