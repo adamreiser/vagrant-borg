@@ -1,0 +1,11 @@
+--- /home/vagrant/angband-3.4.1/src/death.c	2016-10-26 04:59:22.626830666 +0000
++++ angband-3.4.1/src/death.c	2012-10-18 01:33:03.000000000 +0000
+@@ -441,7 +441,7 @@
+ 
+ 	menu_layout(death_menu, &area);
+ 
+-	while (!done && !borg_auto)
++	while (!done)
+ 	{
+ 		ui_event e = menu_select(death_menu, EVT_KBRD, FALSE);
+ 		if (e.type == EVT_KBRD)
