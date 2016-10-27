@@ -4,8 +4,8 @@
  
  	menu_layout(death_menu, &area);
  
--	while (!done && !borg_auto)
-+	while (!done)
+-	while (!done)
++	while (!done && !borg_auto)
  	{
  		ui_event e = menu_select(death_menu, EVT_KBRD, FALSE);
  		if (e.type == EVT_KBRD)
