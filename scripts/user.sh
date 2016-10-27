@@ -14,10 +14,12 @@ fi
 
 tar -xzf v3.4.1.tar.gz
 
-patch -p0 < /vagrant/angband/main-gcu.c.patch
+for file in /vagrant/angband/*.patch; do
+    patch -p0 < "$file"
+done
 
 for file in /vagrant/angband/borg_autorun/*.patch; do
-    patch -p0 < $file
+    patch -p0 < "$file"
 done
 
 cd angband-3.4.1
