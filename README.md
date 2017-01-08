@@ -24,6 +24,9 @@ angband-3.4.1/src/angband
 automatically. It will create a new character of the previous type if no
 character exists. If there is no previous character, the borg will begin
 after character generation.
+- Finally, /vagrant/angband/run.sh will attempt to run the borg forever,
+restarting as needed. To stop gracefully, kill the run.sh process from another
+terminal, take control of the borg session, and exit the game.
 
 ## Notes
 
