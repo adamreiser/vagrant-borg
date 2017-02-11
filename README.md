@@ -20,13 +20,15 @@ vagrant up; vagrant ssh
 angband-3.4.1/src/angband
 ```
 - Create a character, enter the borg prompt by typing a caret (^), then z. Then enter a borg command (z to start the borg).
-- Alternatively, run angband with the '-b' option to start the borg
+- Alternatively, run angband with the patched-in '-b' option to start the borg
 automatically. It will create a new character of the previous type if no
-character exists. If there is no previous character, the borg will begin
-after character generation.
+character exists. If there is no previous type, the borg will begin after
+character generation.
+- Once the borg is running, press any key to pause it and resume interactive
+mode. This can sometimes take a while if the borg is busy.
 - Finally, /vagrant/angband/run.sh will attempt to run the borg forever,
-restarting as needed. To stop gracefully, kill the run.sh process from another
-terminal, take control of the borg session, and exit the game.
+restarting as needed. This will also trap ctrl-c interrupts to break the
+loop, after which you can exit normally.
 
 ## Notes
 
